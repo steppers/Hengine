@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Hengine">
+      <UniqueIdentifier>{3e9bf7e7-9bd1-493a-b1fc-2ec585866aaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\systems">
+      <UniqueIdentifier>{6fb95a16-ba61-4697-8f55-78b18e79d602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\systems\geometry">
+      <UniqueIdentifier>{35ad48e2-de87-4022-8eb4-05ca099d80e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\systems\graphics">
+      <UniqueIdentifier>{9c2e3583-7f1e-4e81-8bc5-f979cac58e1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\systems\input">
+      <UniqueIdentifier>{c58a6934-a06f-4372-8a97-2059234731ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\systems\physics">
+      <UniqueIdentifier>{5fa27f37-5ab5-47da-b3dd-6323722b9efd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\managers">
+      <UniqueIdentifier>{118f57d9-2ee6-4d9c-92d8-326a79341d39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\framework">
+      <UniqueIdentifier>{407c96e1-1109-4265-a0a5-6c7548a2a0b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\managers\task_manager">
+      <UniqueIdentifier>{1aafe7c3-3d36-47da-8362-ef7829adc678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\managers\platform_manager">
+      <UniqueIdentifier>{594136a4-089a-4047-bbc9-b668843c1f24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\managers\state_manager">
+      <UniqueIdentifier>{db5d4b6e-905a-4e9f-b928-5a9414b36c22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hengine\managers\state_manager\change_controllers">
+      <UniqueIdentifier>{7e722673-2cbf-4edd-90e4-53242f5d35a8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="service_manager.cpp">
+      <Filter>Hengine\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="environment_manager.cpp">
+      <Filter>Hengine\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="u_scene.cpp">
+      <Filter>Hengine\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="u_object.cpp">
+      <Filter>Hengine\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry_system.cpp">
+      <Filter>Hengine\systems\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics_system.cpp">
+      <Filter>Hengine\systems\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="physics_system.cpp">
+      <Filter>Hengine\systems\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="input_system.cpp">
+      <Filter>Hengine\systems\input</Filter>
+    </ClCompile>
+    <ClCompile Include="hex_engine.cpp">
+      <Filter>Hengine\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Hengine</Filter>
+    </ClCompile>
+    <ClCompile Include="task_manager.cpp">
+      <Filter>Hengine\managers\task_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="task_thread.cpp">
+      <Filter>Hengine\managers\task_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_pool.cpp">
+      <Filter>Hengine\managers\task_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="platform_manager.cpp">
+      <Filter>Hengine\managers\platform_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="window.cpp">
+      <Filter>Hengine\systems\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>Hengine\managers\platform_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="state_manager.cpp">
+      <Filter>Hengine\managers\state_manager</Filter>
+    </ClCompile>
+    <ClCompile Include="object_change_listener.cpp">
+      <Filter>Hengine\managers\state_manager\change_controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="scene_change_listener.cpp">
+      <Filter>Hengine\managers\state_manager\change_controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="geom_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="service_manager.h">
+      <Filter>Hengine\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="environment_manager.h">
+      <Filter>Hengine\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="scheduler.h">
+      <Filter>Hengine\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="u_scene.h">
+      <Filter>Hengine\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="u_object.h">
+      <Filter>Hengine\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry_system.h">
+      <Filter>Hengine\systems\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics_system.h">
+      <Filter>Hengine\systems\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="physics_system.h">
+      <Filter>Hengine\systems\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="input_system.h">
+      <Filter>Hengine\systems\input</Filter>
+    </ClInclude>
+    <ClInclude Include="window.h">
+      <Filter>Hengine\systems\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="hex_engine.h">
+      <Filter>Hengine\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="task_manager.h">
+      <Filter>Hengine\managers\task_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="task_thread.h">
+      <Filter>Hengine\managers\task_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_pool.h">
+      <Filter>Hengine\managers\task_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="system.h">
+      <Filter>Hengine\systems</Filter>
+    </ClInclude>
+    <ClInclude Include="platform_manager.h">
+      <Filter>Hengine\managers\platform_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>Hengine\managers\platform_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="state_manager.h">
+      <Filter>Hengine\managers\state_manager</Filter>
+    </ClInclude>
+    <ClInclude Include="object_change_listener.h">
+      <Filter>Hengine\managers\state_manager\change_controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="scene_change_listener.h">
+      <Filter>Hengine\managers\state_manager\change_controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="geom_object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
