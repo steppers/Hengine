@@ -1,5 +1,8 @@
 #pragma once
 
+//GLFW
+#include <GLFW\glfw3.h>
+
 //managers
 #include "state_manager.h"
 #include "environment_manager.h"
@@ -7,8 +10,8 @@
 #include "service_manager.h"
 #include "task_manager.h"
 
-//framework
-#include "u_scene.h"
+//Game World
+#include "scene_loader.h"
 
 //Systems
 #include "graphics_system.h"
@@ -24,7 +27,7 @@
 class hex_engine
 {
 public:
-	hex_engine();
+	hex_engine(scene_template* first_scene);
 	~hex_engine();
 
 	void setScene(u_scene scene);
@@ -32,7 +35,7 @@ public:
 
 private:
 	//Scene
-	u_scene scene;
+	scene_loader _scene_loader;
 
 	//Managers
 	state_manager _state_manager;

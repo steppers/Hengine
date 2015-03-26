@@ -5,12 +5,11 @@ state_manager::state_manager()
 	
 }
 
-
 state_manager::~state_manager()
 {
 }
 
-void state_manager::submitObjectChange(u_object* obj, System* sys, int thread)
+void state_manager::submitObjectChange(game_object* obj, System* sys, int thread)
 {
 	/*object_change* change = new object_change(obj, sys);
 	changes[thread].push_back(change);*/

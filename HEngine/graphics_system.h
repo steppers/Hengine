@@ -9,6 +9,8 @@
 #include "window.h"
 #include "system.h"
 
+#include "geometry_system.h"
+
 class graphics_system : public System
 {
 public:
@@ -32,5 +34,7 @@ private:
 	task_manager* _task_manager;
 
 	window* win;
+
+	u_scene* scene;
 };
 

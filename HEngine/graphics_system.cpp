@@ -25,7 +25,7 @@ graphics_system::~graphics_system()
 
 void graphics_system::init()
 {
-
+	//_state_manager->registerSceneListener(this, geom_system);
 }
 
 void graphics_system::system_task()

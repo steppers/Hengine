@@ -8,6 +8,7 @@
 
 #include "system.h"
 #include <iostream>
+#include <unordered_map>
 
 using namespace std;
 
@@ -32,5 +33,4 @@ private:
 	platform_manager* _platform_manager;
 	service_manager* _service_manager;
 	task_manager* _task_manager;
-
 };

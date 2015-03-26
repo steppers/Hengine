@@ -12,10 +12,10 @@ public:
 	state_manager();
 	~state_manager();
 
-	void submitObjectChange(u_object* obj, System* sys, int thread);
+	void submitObjectChange(game_object* obj, System* sys, int thread);
 	void submitSceneChange(u_scene* scn, System* sys, int thread);
 
-	void registerObjectListener(u_object* obj, System* observer, System* subject){
+	void registerObjectListener(game_object* obj, System* observer, System* subject){
 		_object_listener.registerListener(obj,  observer, subject);
 	}
 	void registerSceneListener(System* observer, System* subject){
