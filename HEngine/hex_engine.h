@@ -14,6 +14,7 @@
 #include "scene_loader.h"
 
 //Systems
+#include "system_builder.h"
 #include "graphics_system.h"
 #include "input_system.h"
 #include "geometry_system.h"
@@ -52,6 +53,7 @@ private:
 	scheduler _scheduler;
 
 	bool _running = false;
+	double delta = 0;
 
 	void run();
 	void stop();

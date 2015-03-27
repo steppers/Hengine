@@ -82,14 +82,13 @@
     <ClCompile Include="input.cpp" />
     <ClCompile Include="input_system.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="object_change_listener.cpp" />
+    <ClCompile Include="component_change_listener.cpp" />
     <ClCompile Include="physics_system.cpp" />
     <ClCompile Include="platform_manager.cpp" />
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="scene_change_listener.cpp" />
     <ClCompile Include="scene_loader.cpp" />
     <ClCompile Include="service_manager.cpp" />
-    <ClCompile Include="state_manager.cpp" />
     <ClCompile Include="task_manager.cpp" />
     <ClCompile Include="test_scene.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
@@ -114,7 +113,7 @@
     <ClInclude Include="hex_engine.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="input_system.h" />
-    <ClInclude Include="object_change_listener.h" />
+    <ClInclude Include="component_change_listener.h" />
     <ClInclude Include="physics_system.h" />
     <ClInclude Include="platform_manager.h" />
     <ClInclude Include="scene.h" />
@@ -125,6 +124,7 @@
     <ClInclude Include="service_manager.h" />
     <ClInclude Include="state_manager.h" />
     <ClInclude Include="system.h" />
+    <ClInclude Include="system_builder.h" />
     <ClInclude Include="task_manager.h" />
     <ClInclude Include="thread_pool.h" />
     <ClInclude Include="task_thread.h" />

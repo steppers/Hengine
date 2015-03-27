@@ -1,35 +1,24 @@
 #include "hex_engine.h"
 
 hex_engine::hex_engine(scene_template* first_scene)
+	: _scene_loader(&_state_manager)
 {
-	_graphics = new graphics_system(&_state_manager,
-		&_environment_manager,
-		&_platform_manager,
-		&_service_manager,
-		&_task_manager);
+	system_builder sys(&_state_manager, &_environment_manager, &_platform_manager, &_service_manager, &_task_manager);
+	_geometry = (geometry_system*)sys.createSystem(GEOMETRY_SYSTEM);
+	_graphics = (graphics_system*)sys.createSystem(GRAPHICS_SYSTEM);
+	_input = (input_system*)sys.createSystem(INPUT_SYSTEM);
 
-	_input = new input_system(&_state_manager,
-		&_environment_manager,
-		&_platform_manager,
-		&_service_manager,
-		&_task_manager);
-
-	_geometry = new geometry_system(&_state_manager,
-		&_environment_manager,
-		&_platform_manager,
-		&_service_manager,
-		&_task_manager);
-
+	//Load the first scene
 	_scene_loader.load(first_scene);
 
 	//Set the system scenes
 	_graphics->setScene(_scene_loader.getGraphicsScene());
 	_geometry->setScene(_scene_loader.getGeometryScene());
 
-	//Initialise the system's listeners
-	_geometry->init();
-	_graphics->init();
-	_input->init();
+	//Initialise the systems
+	_geometry->init(&delta);
+	_graphics->init(&delta);
+	_input->init(&delta);
 }
 
 
@@ -46,7 +35,6 @@ void hex_engine::start()
 
 void hex_engine::run()
 {
-	double delta = 0;
 	glfwSetTime(0);
 
 	while (_running)

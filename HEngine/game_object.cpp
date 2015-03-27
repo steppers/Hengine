@@ -23,3 +23,10 @@ component* game_object::getComponent(component_type type)
 		return _components.find(type)->second;
 	return NULL;
 }
+
+void game_object::synchronizeComponent(component* comp)
+{
+	unordered_map<component_type, component*>::const_iterator c = _components.find(comp->getType());
+	if (c != _components.end())
+		c->second->updateWith(comp);
+}

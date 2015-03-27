@@ -14,6 +14,8 @@ public:
 	task_thread();
 	~task_thread();
 
+	void setId(int id);
+
 	void notify();
 	bool isAvailable(){ return _task == NULL; }
 	void setTask(System* t){ _task = t; }
@@ -31,6 +33,8 @@ private:
 
 	mutex mtx;
 	condition_variable cv;
+
+	int _id;
 
 	bool executing = true;
 	bool taskAvailable = false;

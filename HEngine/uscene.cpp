@@ -10,7 +10,7 @@ uscene::~uscene()
 
 }
 
-void uscene::init(uobject* root)
+void uscene::init(uobject* root, state_manager* st_mng)
 {
 	_root = root;
 }

@@ -19,12 +19,12 @@ input_system::~input_system()
 
 }
 
-void input_system::init()
+void input_system::init(double* deltaLocation)
 {
-
+	p_delta = deltaLocation;
 }
 
-void input_system::system_task()
+void input_system::system_task(int thread)
 {
 	if (_platform_manager->getInput()->isKeyDown(GLFW_KEY_SPACE))
 		cout << num++ << endl;

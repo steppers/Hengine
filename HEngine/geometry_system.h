@@ -21,9 +21,9 @@ public:
 	~geometry_system();
 
 	void setScene(geometry_scene* scene){ _scene = scene; }
-	void init();
+	void init(double* deltaLocation) override;
 
-	void system_task() override;
+	void system_task(int thread) override;
 
 private:
 	//Manager interfaces

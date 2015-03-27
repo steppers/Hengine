@@ -111,12 +111,6 @@
     <ClCompile Include="input.cpp">
       <Filter>Hengine\managers\platform_manager</Filter>
     </ClCompile>
-    <ClCompile Include="state_manager.cpp">
-      <Filter>Hengine\managers\state_manager</Filter>
-    </ClCompile>
-    <ClCompile Include="object_change_listener.cpp">
-      <Filter>Hengine\managers\state_manager\change_controllers</Filter>
-    </ClCompile>
     <ClCompile Include="scene_change_listener.cpp">
       <Filter>Hengine\managers\state_manager\change_controllers</Filter>
     </ClCompile>
@@ -155,6 +149,9 @@
     </ClCompile>
     <ClCompile Include="geometry_component.cpp">
       <Filter>Hengine\game_world\Objects\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="component_change_listener.cpp">
+      <Filter>Hengine\managers\state_manager\change_controllers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -200,9 +197,6 @@
     <ClInclude Include="state_manager.h">
       <Filter>Hengine\managers\state_manager</Filter>
     </ClInclude>
-    <ClInclude Include="object_change_listener.h">
-      <Filter>Hengine\managers\state_manager\change_controllers</Filter>
-    </ClInclude>
     <ClInclude Include="scene_change_listener.h">
       <Filter>Hengine\managers\state_manager\change_controllers</Filter>
     </ClInclude>
@@ -247,6 +241,12 @@
     </ClInclude>
     <ClInclude Include="component.h">
       <Filter>Hengine\game_world\Objects\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="component_change_listener.h">
+      <Filter>Hengine\managers\state_manager\change_controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="system_builder.h">
+      <Filter>Hengine\systems</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

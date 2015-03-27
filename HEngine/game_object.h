@@ -22,13 +22,28 @@ public:
 
 	void addChild(game_object* child);
 	void setParent(game_object* parent);
+
 	void setUObject(uobject* uobject){ _uobject = uobject; }
+	uobject* getUObject(){ return _uobject; }
 
 	void addComponent(component* comp);
 	component* getComponent(component_type type);
 
 	game_object* getParent(){ return _parent; }
 	vector<game_object*>* getChildren(){ return &_children; }
+
+	void synchronizeComponent(component* comp);
+
+	void run(double* delta, int thread){
+		for (auto kv : _components)
+		{
+			kv.second->run(thread);
+		}
+		for (game_object* go : _children)
+		{
+			go->run(delta, thread);
+		}
+	};
 
 private:
 	uobject* _uobject;

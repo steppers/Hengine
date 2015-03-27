@@ -21,9 +21,9 @@ public:
 		task_manager* tsk_mng);
 	~input_system();
 
-	void init();
+	void init(double* deltaLocation) override;
 
-	void system_task() override;
+	void system_task(int thread) override;
 
 private:
 	//Manager interfaces

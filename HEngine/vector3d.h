@@ -9,7 +9,8 @@ public:
 	vector3d(double x, double y, double z){
 		_x = x;	_y = y;	_z = z;
 	}
-	~vector3d();
+
+	~vector3d(){};
 
 	vector3d* set(double x, double y, double z){
 		_x = x;	_y = y;	_z = z;
@@ -22,6 +23,12 @@ public:
 
 	void add(vector3d val, vector3d dst){
 		dst.set(val._x + _x, val._y + _y, val._z + _z);
+	}
+
+	void add(double x, double y, double z){
+		_x += x;
+		_y += y;
+		_z += z;
 	}
 
 	void sub(vector3d val, vector3d dst){
@@ -53,5 +60,11 @@ public:
 		return this;
 	}
 
+	void copyTo(vector3d* v)
+	{
+		v->set(_x, _y, _z);
+	}
+
+private:
 	double _x, _y, _z;
 };

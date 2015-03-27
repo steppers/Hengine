@@ -12,6 +12,11 @@ task_thread::~task_thread()
 	
 }
 
+void task_thread::setId(int id)
+{
+	_id = id;
+}
+
 void task_thread::loop()
 {
 	unique_lock<mutex> lk(mtx);
@@ -23,7 +28,7 @@ void task_thread::loop()
 		if (_task != NULL)
 		{
 			//Execute task here
-			_task->system_task();
+			_task->system_task(_id);
 			_task = NULL;
 		}
 	}

@@ -4,6 +4,11 @@ thread_pool::thread_pool(int numThreads)
 {
 	_numThreads = numThreads;
 	_threads = new task_thread[numThreads];
+
+	for (int i = 0; i < numThreads; i++)
+	{
+		_threads[i].setId(i);
+	}
 }
 
 thread_pool::~thread_pool()

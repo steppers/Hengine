@@ -1,8 +1,7 @@
 #pragma once
 
 #include "scene.h"
-
-class uobject;
+#include "uobject.h"
 
 class uscene : public scene
 {
@@ -10,7 +9,7 @@ public:
 	uscene();
 	~uscene();
 
-	void init(uobject* root) override;
+	void init(uobject* root, state_manager* st_mng) override;
 	uobject* getRoot(){ return _root; }
 
 private:

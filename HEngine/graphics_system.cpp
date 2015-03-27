@@ -23,15 +23,14 @@ graphics_system::~graphics_system()
 	delete win;
 }
 
-void graphics_system::init()
+void graphics_system::init(double* deltaLocation)
 {
-	//_state_manager->registerSceneListener(this, geom_system);
+	p_delta = deltaLocation;
 }
 
-void graphics_system::system_task()
+void graphics_system::system_task(int thread)
 {
 	glfwMakeContextCurrent(win->getWindow());
-	glClearColor(1, 0.5f, 0, 1);
-	glClear(GL_COLOR_BUFFER_BIT);
+	_scene->run(p_delta, thread);
 	win->update();
 }

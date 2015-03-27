@@ -19,12 +19,12 @@ geometry_system::~geometry_system()
 
 }
 
-void geometry_system::init()
+void geometry_system::init(double* deltaLocation)
 {
-
+	p_delta = deltaLocation;
 }
 
-void geometry_system::system_task()
+void geometry_system::system_task(int thread)
 {
-	
+	_scene->run(p_delta, thread);
 }

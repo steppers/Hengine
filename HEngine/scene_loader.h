@@ -2,6 +2,8 @@
 
 #include <vector>
 
+#include "state_manager.h"
+
 #include "scene_template.h"
 
 #include "uscene.h"
@@ -11,7 +13,7 @@
 class scene_loader
 {
 public:
-	scene_loader();
+	scene_loader(state_manager* _st_mng);
 	~scene_loader(){};
 
 	void load(scene_template* scene);
@@ -28,6 +30,9 @@ private:
 	//System scenes
 	geometry_scene* _geometry_scene = NULL;
 	graphics_scene* _graphics_scene = NULL;
+
+	//State manager
+	state_manager* _st_mng;
 
 	void genScenes();
 	void createNewScenes();
