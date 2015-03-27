@@ -7,10 +7,8 @@
 #include "task_manager.h"
 
 #include "system.h"
-#include <iostream>
-#include <unordered_map>
 
-using namespace std;
+#include "geometry_scene.h"
 
 class geometry_system : public System
 {
@@ -22,6 +20,7 @@ public:
 		task_manager* tsk_mng);
 	~geometry_system();
 
+	void setScene(geometry_scene* scene){ _scene = scene; }
 	void init();
 
 	void system_task() override;
@@ -33,4 +32,6 @@ private:
 	platform_manager* _platform_manager;
 	service_manager* _service_manager;
 	task_manager* _task_manager;
+
+	geometry_scene* _scene;
 };

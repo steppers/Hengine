@@ -1,6 +1,5 @@
 #pragma once
 
-#include "game_object.h"
 #include "scene.h"
 
 class System
@@ -11,7 +10,4 @@ public:
 
 	//Called by the scene loader
 	virtual void createSystemScene(){};
-
-protected:
-	scene _scene;
 };

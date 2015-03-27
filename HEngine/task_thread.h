@@ -18,6 +18,13 @@ public:
 	bool isAvailable(){ return _task == NULL; }
 	void setTask(System* t){ _task = t; }
 
+	void stop(){ 
+		_task = NULL;
+		executing = false;
+		notify();
+		thr->join();
+	}
+
 private:
 	thread* thr;
 	System* _task = NULL;

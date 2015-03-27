@@ -1,13 +1,19 @@
 #pragma once
 
-#include "game_object.h"
+#include "uobject.h"
+
+//Component includes
+#include "geometry_component.h"
+#include "graphics_component.h"
 
 class scene_template
 {
 public:
+	scene_template():root("root"){}
+
 	virtual void load() = 0;
-	game_object* getRoot(){ return &root; };
+	uobject* getRoot(){ return &root; };
 	
 protected:
-	game_object root;
+	uobject root;
 };

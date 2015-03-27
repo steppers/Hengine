@@ -9,7 +9,7 @@
 #include "window.h"
 #include "system.h"
 
-#include "geometry_system.h"
+#include "graphics_scene.h"
 
 class graphics_system : public System
 {
@@ -21,6 +21,7 @@ public:
 		task_manager* tsk_mng);
 	~graphics_system();
 
+	void setScene(graphics_scene* scene){ _scene = scene; }
 	void init();
 
 	void system_task() override;
@@ -35,6 +36,6 @@ private:
 
 	window* win;
 
-	u_scene* scene;
+	graphics_scene* _scene;
 };
 

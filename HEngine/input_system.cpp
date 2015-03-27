@@ -16,6 +16,7 @@ input_system::input_system(state_manager* st_mng,
 
 input_system::~input_system()
 {
+
 }
 
 void input_system::init()

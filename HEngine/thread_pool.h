@@ -21,6 +21,8 @@ public:
 		return true;
 	};
 
+	void destroy();
+
 private:
 	task_thread* _threads = NULL;
 	int _numThreads = 0;

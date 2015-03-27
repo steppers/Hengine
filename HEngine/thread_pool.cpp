@@ -8,7 +8,7 @@ thread_pool::thread_pool(int numThreads)
 
 thread_pool::~thread_pool()
 {
-	delete[] _threads;
+	
 }
 
 void thread_pool::startTask(System* t)
@@ -25,4 +25,13 @@ void thread_pool::startTask(System* t)
 			}
 		}
 	}
+}
+
+void thread_pool::destroy()
+{
+	for (int i = 0; i < _numThreads; i++)
+	{
+		_threads[i].stop();
+	}
+	delete[] _threads;
 }

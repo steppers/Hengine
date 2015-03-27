@@ -120,9 +120,6 @@
     <ClCompile Include="scene_change_listener.cpp">
       <Filter>Hengine\managers\state_manager\change_controllers</Filter>
     </ClCompile>
-    <ClCompile Include="geom_object.cpp">
-      <Filter>Hengine\systems\geometry</Filter>
-    </ClCompile>
     <ClCompile Include="game_object.cpp">
       <Filter>Hengine\game_world\Objects</Filter>
     </ClCompile>
@@ -140,6 +137,24 @@
     </ClCompile>
     <ClCompile Include="test_scene.h">
       <Filter>TestGame</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry_scene.cpp">
+      <Filter>Hengine\systems\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="uscene.cpp">
+      <Filter>Hengine\game_world\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics_scene.cpp">
+      <Filter>Hengine\systems\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="uobject.cpp">
+      <Filter>Hengine\game_world\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics_component.cpp">
+      <Filter>Hengine\game_world\Objects\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry_component.cpp">
+      <Filter>Hengine\game_world\Objects\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -194,9 +209,6 @@
     <ClInclude Include="vector3d.h">
       <Filter>Hengine\Math</Filter>
     </ClInclude>
-    <ClInclude Include="geom_object.h">
-      <Filter>Hengine\systems\geometry</Filter>
-    </ClInclude>
     <ClInclude Include="game_object.h">
       <Filter>Hengine\game_world\Objects</Filter>
     </ClInclude>
@@ -214,6 +226,27 @@
     </ClInclude>
     <ClInclude Include="scene_template.h">
       <Filter>Hengine\game_world\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry_scene.h">
+      <Filter>Hengine\systems\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="uscene.h">
+      <Filter>Hengine\game_world\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics_scene.h">
+      <Filter>Hengine\systems\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="uobject.h">
+      <Filter>Hengine\game_world\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics_component.h">
+      <Filter>Hengine\game_world\Objects\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry_component.h">
+      <Filter>Hengine\game_world\Objects\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="component.h">
+      <Filter>Hengine\game_world\Objects\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

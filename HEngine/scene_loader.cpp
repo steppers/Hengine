@@ -1,22 +1,16 @@
 #include "scene_loader.h"
 
+scene_loader::scene_loader()
+{
+	_u_scene = new uscene();
+	_geometry_scene = new geometry_scene();
+	_graphics_scene = new graphics_scene();
+}
+
 void scene_loader::load(scene_template* scene)
 {
 	scene->load();
-	_rootObject = scene->getRoot();
-}
-
-void scene_loader::genScenes()
-{
-	//Generate the different scene types from the root object and it's children's components.
-}
-
-game_object* scene_loader::getRootObject()
-{
-	return _rootObject;
-}
-
-vector<scene*>* scene_loader::getScenes()
-{
-	return &_scenes;
+	_u_scene->init(scene->getRoot());
+	_geometry_scene->init(_u_scene->getRoot());
+	_graphics_scene->init(_u_scene->getRoot());
 }

@@ -9,9 +9,7 @@ task_thread::task_thread()
 
 task_thread::~task_thread()
 {
-	executing = false;
-	thr->join();
-	delete thr;
+	
 }
 
 void task_thread::loop()
@@ -22,11 +20,12 @@ void task_thread::loop()
 		//Wait
 		cv.wait(lk);
 
-		while (_task == NULL){}
-
-		//Execute task here
-		_task->system_task();
-		_task = NULL;
+		if (_task != NULL)
+		{
+			//Execute task here
+			_task->system_task();
+			_task = NULL;
+		}
 	}
 }
 

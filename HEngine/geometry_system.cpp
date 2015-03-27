@@ -26,5 +26,5 @@ void geometry_system::init()
 
 void geometry_system::system_task()
 {
-	//cout << "Geometry system running" << endl;
+	
 }

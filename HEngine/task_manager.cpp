@@ -23,3 +23,8 @@ void task_manager::executeTasks()
 	//Wait for all tasks to complete
 	while (!pool->isEmpty()){}
 }
+
+void task_manager::destroy()
+{
+	pool->destroy();
+}

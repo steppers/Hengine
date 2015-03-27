@@ -22,11 +22,14 @@ hex_engine::hex_engine(scene_template* first_scene)
 
 	_scene_loader.load(first_scene);
 
+	//Set the system scenes
+	_graphics->setScene(_scene_loader.getGraphicsScene());
+	_geometry->setScene(_scene_loader.getGeometryScene());
+
+	//Initialise the system's listeners
+	_geometry->init();
 	_graphics->init();
 	_input->init();
-	_geometry->init();
-
-	
 }
 
 
@@ -68,6 +71,14 @@ void hex_engine::run()
 		_state_manager.distributeChanges();
 
 		if (_platform_manager.getWindow()->isCloseRequested())
-			_running = false;
+			stop();
 	}
+}
+
+void hex_engine::stop()
+{
+	_running = false;
+
+	//Make sure all our objects and threads are deleted
+	_task_manager.destroy();
 }

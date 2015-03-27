@@ -15,6 +15,8 @@ public:
 	void submitTasks(queue<System*>* queue){ taskQueue = queue; }
 	void executeTasks();
 
+	void destroy();
+
 private:
 	thread_pool* pool;
 	queue<System*>* taskQueue;

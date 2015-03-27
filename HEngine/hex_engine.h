@@ -30,7 +30,6 @@ public:
 	hex_engine(scene_template* first_scene);
 	~hex_engine();
 
-	void setScene(u_scene scene);
 	void start();
 
 private:
@@ -55,5 +54,6 @@ private:
 	bool _running = false;
 
 	void run();
+	void stop();
 };
 
