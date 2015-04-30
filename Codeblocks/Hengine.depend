@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1430409030 source:/home/steppers/Git/Hengine/Codeblocks/src/window.cpp
+	"window.h"
+
+1430406537 /home/steppers/Git/Hengine/Codeblocks/src/window.h
+	<string>
+	<iostream>
+	<GLFW/glfw3.h>
+
+1430406516 source:/home/steppers/Git/Hengine/Codeblocks/main.cpp
+	"window.h"
+
+1430408357 source:/home/steppers/Git/Hengine/Codeblocks/src/main.cpp
+	"window.h"
+

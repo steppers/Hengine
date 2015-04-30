@@ -3,12 +3,21 @@
 
 #include <string>
 #include <iostream>
+#include <GLFW/glfw3.h>
 
-class window
+using namespace std;
+
+class Window
 {
     public:
-        window(int width, int height, string title);
-        ~window();
+        Window(int width, int height, string title);
+        ~Window();
+
+        void update();
+        void getInput();
+
+        bool isCloseRequested();
+
     private:
         GLFWwindow* _window;
 
