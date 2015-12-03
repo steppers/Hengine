@@ -3,6 +3,6 @@
 
 **This is an old attempt!!**
 
-**See the SSim repository for my most recent and successful engine**
+**See the R-Engine repository for my most recent and successful engine**
 
 https://github.com/steppers/R-Engine-2015
